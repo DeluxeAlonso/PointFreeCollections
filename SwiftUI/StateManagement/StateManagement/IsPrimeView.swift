@@ -16,13 +16,13 @@ struct IsPrimeView: View {
                 Text("\(state.count) is prime")
                 if state.favoritePrimes.contains(state.count) {
                     Button(action: {
-                        state.favoritePrimes.removeAll(where: { $0 == state.count })
+                        state.removeFavoritePrime()
                     }) {
                         Text("Remove from favorite pimes")
                     }
                 } else {
                     Button(action: {
-                        state.favoritePrimes.append(state.count)
+                        state.addFavoritePrime()
                     }) {
                         Text("Save to favorite pimes")
                     }
