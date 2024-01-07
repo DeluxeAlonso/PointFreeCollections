@@ -13,6 +13,7 @@
 		E2AD2FB02B4A3752008BF079 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2AD2FAF2B4A3752008BF079 /* Preview Assets.xcassets */; };
 		E2AD2FB72B4A39FC008BF079 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AD2FB62B4A39FC008BF079 /* CounterView.swift */; };
 		E2AD2FB92B4A4008008BF079 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AD2FB82B4A4008008BF079 /* AppState.swift */; };
+		E2AD2FBB2B4A5FD2008BF079 /* IsPrimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AD2FBA2B4A5FD2008BF079 /* IsPrimeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E2AD2FAF2B4A3752008BF079 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2AD2FB62B4A39FC008BF079 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		E2AD2FB82B4A4008008BF079 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		E2AD2FBA2B4A5FD2008BF079 /* IsPrimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsPrimeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E2AD2FA82B4A3751008BF079 /* StateManagementApp.swift */,
 				E2AD2FAA2B4A3751008BF079 /* ContentView.swift */,
 				E2AD2FB62B4A39FC008BF079 /* CounterView.swift */,
+				E2AD2FBA2B4A5FD2008BF079 /* IsPrimeView.swift */,
 				E2AD2FAC2B4A3752008BF079 /* Assets.xcassets */,
 				E2AD2FAE2B4A3752008BF079 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2AD2FBB2B4A5FD2008BF079 /* IsPrimeView.swift in Sources */,
 				E2AD2FAB2B4A3751008BF079 /* ContentView.swift in Sources */,
 				E2AD2FA92B4A3751008BF079 /* StateManagementApp.swift in Sources */,
 				E2AD2FB72B4A39FC008BF079 /* CounterView.swift in Sources */,

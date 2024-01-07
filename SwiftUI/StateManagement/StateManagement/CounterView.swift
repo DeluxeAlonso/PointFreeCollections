@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CounterView: View {
     @ObservedObject var state: AppState
+    @State var isPrimeModalShown: Bool = false
 
     var body: some View {
         VStack {
@@ -21,7 +22,7 @@ struct CounterView: View {
                     Text("+")
                 }
             }
-            Button(action: {}) {
+            Button(action: { isPrimeModalShown = true }) {
                 Text("Is this prime?")
             }
             Button(action: {}) {
@@ -30,6 +31,9 @@ struct CounterView: View {
         }
         .font(.title)
         .navigationTitle("Counter demo")
+        .sheet(isPresented: $isPrimeModalShown) {
+            IsPrimeView(state: state)
+        }
     }
 
     private func ordinal(_ n: Int) -> String {
