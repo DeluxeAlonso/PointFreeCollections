@@ -9,7 +9,9 @@ import SwiftUI
 
 struct CounterView: View {
     @ObservedObject var state: AppState
+
     @State var isPrimeModalShown: Bool = false
+    @State var alertNthPrime: Int?
 
     var body: some View {
         VStack {
@@ -25,7 +27,11 @@ struct CounterView: View {
             Button(action: { isPrimeModalShown = true }) {
                 Text("Is this prime?")
             }
-            Button(action: {}) {
+            Button(action: {
+                nthPrime(state.count) { prime in
+                    alertNthPrime = prime
+                }
+            }) {
                 Text("What is the \(ordinal(state.count)) prime?")
             }
         }
@@ -33,6 +39,10 @@ struct CounterView: View {
         .navigationTitle("Counter demo")
         .sheet(isPresented: $isPrimeModalShown) {
             IsPrimeView(state: state)
+        }
+        .alert(item: self.$alertNthPrime) { n in
+            Alert(title: Text("The \(ordinal(state.count)) prime is \(n)"),
+                  dismissButton: Alert.Button.default(Text("OK")))
         }
     }
 
@@ -46,5 +56,12 @@ struct CounterView: View {
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
         CounterView(state: AppState())
+    }
+}
+
+extension Int: Identifiable {
+    public typealias ID = Int
+    public var id: Int {
+        return self
     }
 }
