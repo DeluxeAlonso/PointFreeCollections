@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: EmptyView()) {
+                NavigationLink(destination: CounterView()) {
                     Text("Counter demo")
                 }
                 NavigationLink(destination: EmptyView()) {
