@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct CounterView: View {
-    // Life cycle of state variables mirrors the view life cycle
-    @State var count = 0
+    @ObservedObject var state: AppState
 
     var body: some View {
         VStack {
             HStack {
-                Button(action: { count -= 1 }) {
+                Button(action: { state.count -= 1 }) {
                     Text("-")
                 }
-                Text("\(count)")
-                Button(action: { count += 1 }) {
+                Text("\(state.count)")
+                Button(action: { state.count += 1 }) {
                     Text("+")
                 }
             }
@@ -26,7 +25,7 @@ struct CounterView: View {
                 Text("Is this prime?")
             }
             Button(action: {}) {
-                Text("What is the \(ordinal(count)) prime?")
+                Text("What is the \(ordinal(state.count)) prime?")
             }
         }
         .font(.title)
@@ -42,6 +41,6 @@ struct CounterView: View {
 
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
-        CounterView()
+        CounterView(state: AppState())
     }
 }
