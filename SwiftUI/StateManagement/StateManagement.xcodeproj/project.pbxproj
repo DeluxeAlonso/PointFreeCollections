@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E24200392B4B488E009E0840 /* FavoritePrimesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24200382B4B488E009E0840 /* FavoritePrimesView.swift */; };
 		E242003B2B4B5C59009E0840 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242003A2B4B5C59009E0840 /* Activity.swift */; };
+		E242003D2B4B7CCD009E0840 /* FavoritePrimesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E242003C2B4B7CCD009E0840 /* FavoritePrimesState.swift */; };
 		E2AD2FA92B4A3751008BF079 /* StateManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AD2FA82B4A3751008BF079 /* StateManagementApp.swift */; };
 		E2AD2FAB2B4A3751008BF079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AD2FAA2B4A3751008BF079 /* ContentView.swift */; };
 		E2AD2FAD2B4A3752008BF079 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2AD2FAC2B4A3752008BF079 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		E24200382B4B488E009E0840 /* FavoritePrimesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePrimesView.swift; sourceTree = "<group>"; };
 		E242003A2B4B5C59009E0840 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		E242003C2B4B7CCD009E0840 /* FavoritePrimesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePrimesState.swift; sourceTree = "<group>"; };
 		E2AD2FA52B4A3751008BF079 /* StateManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2AD2FA82B4A3751008BF079 /* StateManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateManagementApp.swift; sourceTree = "<group>"; };
 		E2AD2FAA2B4A3751008BF079 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				E2AD2FB82B4A4008008BF079 /* AppState.swift */,
+				E242003C2B4B7CCD009E0840 /* FavoritePrimesState.swift */,
 				E2AD2FA82B4A3751008BF079 /* StateManagementApp.swift */,
 				E2AD2FAA2B4A3751008BF079 /* ContentView.swift */,
 				E2AD2FB62B4A39FC008BF079 /* CounterView.swift */,
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E242003D2B4B7CCD009E0840 /* FavoritePrimesState.swift in Sources */,
 				E2AD2FBD2B4A645C008BF079 /* WolframAlphaResult.swift in Sources */,
 				E24200392B4B488E009E0840 /* FavoritePrimesView.swift in Sources */,
 				E2AD2FBB2B4A5FD2008BF079 /* IsPrimeView.swift in Sources */,

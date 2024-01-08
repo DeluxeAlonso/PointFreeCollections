@@ -16,7 +16,7 @@ struct ContentView: View {
                 NavigationLink(destination: CounterView(state: state)) {
                     Text("Counter demo")
                 }
-                NavigationLink(destination: FavoritePrimesView(state: state)) {
+                NavigationLink(destination: FavoritePrimesView(state: FavoritePrimesState(state: state))) {
                     Text("Favorite primes")
                 }
             }

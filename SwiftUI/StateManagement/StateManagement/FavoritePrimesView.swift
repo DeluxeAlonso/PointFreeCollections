@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoritePrimesView: View {
-    @ObservedObject var state: AppState
+    @ObservedObject var state: FavoritePrimesState
 
     var body: some View {
         List {
@@ -25,6 +25,6 @@ struct FavoritePrimesView: View {
 
 struct FavoritePrimesView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoritePrimesView(state: AppState())
+        FavoritePrimesView(state: FavoritePrimesState(state: AppState()))
     }
 }
