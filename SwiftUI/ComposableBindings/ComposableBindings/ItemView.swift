@@ -25,14 +25,40 @@ struct ItemView: View {
                 Text("Color")
             }
 
+            if item.isInStock {
+                Section {
+                    Stepper("Quantity: \(item.quantity)", value: $item.quantity)
+                    Button("Mark as sold out") {
+                        item.quantity = 0
+                        item.isInStock = false
+                    }
+                } header: {
+                    Text("In stock")
+                }
+            } else {
+                Section {
+                    Toggle("Is on back order?", isOn: $item.isOnBackOrder)
+                    Button("Is back in stock!") {
+                        item.quantity = 1
+                        item.isInStock = true
+                    }
+                } header: {
+                    Text("Out of stock")
+                }
+
+            }
+
         }.navigationTitle("Add item")
     }
 }
 
 struct ItemView_Previews: PreviewProvider {
     static var previews: some View {
-        return NavigationView {
+        Group {
             ItemView(item: .constant(.init(name: "Item", color: .blue)))
+                .previewDisplayName("In stock")
+            ItemView(item: .constant(.init(name: "Item", color: .blue, isInStock: false, isOnBackOrder: true)))
+                .previewDisplayName("In stock")
         }
     }
 }
