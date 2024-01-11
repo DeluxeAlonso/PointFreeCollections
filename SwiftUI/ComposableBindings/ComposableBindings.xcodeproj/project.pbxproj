@@ -11,6 +11,8 @@
 		E217A5A82B4B919A00E01393 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E217A5A72B4B919A00E01393 /* ContentView.swift */; };
 		E217A5AA2B4B919B00E01393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E217A5A92B4B919B00E01393 /* Assets.xcassets */; };
 		E217A5AD2B4B919B00E01393 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E217A5AC2B4B919B00E01393 /* Preview Assets.xcassets */; };
+		E28663042B4F932E00774C25 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28663032B4F932E00774C25 /* Item.swift */; };
+		E28663062B4F938300774C25 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28663052B4F938300774C25 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E217A5A72B4B919A00E01393 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E217A5A92B4B919B00E01393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E217A5AC2B4B919B00E01393 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E28663032B4F932E00774C25 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E28663052B4F938300774C25 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				E217A5A72B4B919A00E01393 /* ContentView.swift */,
 				E217A5A92B4B919B00E01393 /* Assets.xcassets */,
 				E217A5AB2B4B919B00E01393 /* Preview Content */,
+				E28663032B4F932E00774C25 /* Item.swift */,
+				E28663052B4F938300774C25 /* ItemView.swift */,
 			);
 			path = ComposableBindings;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E217A5A82B4B919A00E01393 /* ContentView.swift in Sources */,
+				E28663042B4F932E00774C25 /* Item.swift in Sources */,
 				E217A5A62B4B919A00E01393 /* ComposableBindingsApp.swift in Sources */,
+				E28663062B4F938300774C25 /* ItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
