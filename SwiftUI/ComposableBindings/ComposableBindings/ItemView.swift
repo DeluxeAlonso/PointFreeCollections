@@ -25,18 +25,19 @@ struct ItemView: View {
                 Text("Color")
             }
 
-            if item.status.isInStock {
+            self.$item.status.quantity.unwrap().map { quantity in
                 Section {
-                    Stepper("Quantity: \(item.status.quantity)", value: $item.status.quantity)
+                    Stepper("Quantity: \(quantity.wrappedValue)", value: quantity, in: 1...Int.max)
                     Button("Mark as sold out") {
                         item.status = .outOfStock(isOnBackOrder: false)
                     }
                 } header: {
                     Text("In stock")
                 }
-            } else {
+            }
+            self.$item.status.isOnBackOrder.unwrap().map { isOnBackOrder in
                 Section {
-                    Toggle("Is on back order?", isOn: $item.status.isOnBackOrder)
+                    Toggle("Is on back order?", isOn: isOnBackOrder)
                     Button("Is back in stock!") {
                         item.status = .inStock(quantity: 1)
                     }
@@ -54,7 +55,7 @@ struct ItemView_Previews: PreviewProvider {
             ItemView(item: .constant(.init(name: "Item", color: .blue, status: .inStock(quantity: 1))))
                 .previewDisplayName("In stock")
             ItemView(item: .constant(.init(name: "Item", color: .blue, status: .outOfStock(isOnBackOrder: true))))
-                .previewDisplayName("In stock")
+                .previewDisplayName("Out of stock")
         }
     }
 }

@@ -14,6 +14,7 @@
 		E28663042B4F932E00774C25 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28663032B4F932E00774C25 /* Item.swift */; };
 		E28663062B4F938300774C25 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28663052B4F938300774C25 /* ItemView.swift */; };
 		E2B0135E2B5CADBF00B3E626 /* Binding+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0135D2B5CADBF00B3E626 /* Binding+Map.swift */; };
+		E2B013602B5CD5E900B3E626 /* Binding+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0135F2B5CD5E900B3E626 /* Binding+Unwrap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E28663032B4F932E00774C25 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E28663052B4F938300774C25 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		E2B0135D2B5CADBF00B3E626 /* Binding+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Map.swift"; sourceTree = "<group>"; };
+		E2B0135F2B5CD5E900B3E626 /* Binding+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Unwrap.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				E28663032B4F932E00774C25 /* Item.swift */,
 				E28663052B4F938300774C25 /* ItemView.swift */,
 				E2B0135D2B5CADBF00B3E626 /* Binding+Map.swift */,
+				E2B0135F2B5CD5E900B3E626 /* Binding+Unwrap.swift */,
 			);
 			path = ComposableBindings;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				E217A5A82B4B919A00E01393 /* ContentView.swift in Sources */,
 				E28663042B4F932E00774C25 /* Item.swift in Sources */,
 				E217A5A62B4B919A00E01393 /* ComposableBindingsApp.swift in Sources */,
+				E2B013602B5CD5E900B3E626 /* Binding+Unwrap.swift in Sources */,
 				E28663062B4F938300774C25 /* ItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

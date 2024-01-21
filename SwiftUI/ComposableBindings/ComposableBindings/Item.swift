@@ -19,29 +19,31 @@ struct Item {
             return true
         }
 
-        var isOnBackOrder: Bool {
+        var isOnBackOrder: Bool? {
             get {
               guard case let .outOfStock(isOnBackOrder) = self else {
-                return false
+                return nil
               }
               return isOnBackOrder
             }
             set {
+                guard let newValue = newValue else { return }
                 self = .outOfStock(isOnBackOrder: newValue)
             }
         }
         
-        var quantity: Int {
+        var quantity: Int? {
             get {
                 switch self {
                 case .inStock(quantity: let quantity):
                     return quantity
                 case .outOfStock:
-                    return 0
+                    return nil
                 }
             }
             set {
-                self = .inStock(quantity: newValue)
+                guard let quantity = newValue else { return }
+                self = .inStock(quantity: quantity)
             }
         }
     }
