@@ -13,6 +13,7 @@
 		E217A5AD2B4B919B00E01393 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E217A5AC2B4B919B00E01393 /* Preview Assets.xcassets */; };
 		E28663042B4F932E00774C25 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28663032B4F932E00774C25 /* Item.swift */; };
 		E28663062B4F938300774C25 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28663052B4F938300774C25 /* ItemView.swift */; };
+		E2A7E0A02B5DDD0A00C27C9B /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = E2A7E09F2B5DDD0A00C27C9B /* CasePaths */; };
 		E2B013602B5CD5E900B3E626 /* Binding+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0135F2B5CD5E900B3E626 /* Binding+Unwrap.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2A7E0A02B5DDD0A00C27C9B /* CasePaths in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,9 @@
 			dependencies = (
 			);
 			name = ComposableBindings;
+			packageProductDependencies = (
+				E2A7E09F2B5DDD0A00C27C9B /* CasePaths */,
+			);
 			productName = ComposableBindings;
 			productReference = E217A5A22B4B919A00E01393 /* ComposableBindings.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = E217A5992B4B919A00E01393;
+			packageReferences = (
+				E2A7E09E2B5DDD0A00C27C9B /* XCRemoteSwiftPackageReference "swift-case-paths" */,
+			);
 			productRefGroup = E217A5A32B4B919A00E01393 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -351,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E2A7E09E2B5DDD0A00C27C9B /* XCRemoteSwiftPackageReference "swift-case-paths" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-case-paths";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E2A7E09F2B5DDD0A00C27C9B /* CasePaths */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2A7E09E2B5DDD0A00C27C9B /* XCRemoteSwiftPackageReference "swift-case-paths" */;
+			productName = CasePaths;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E217A59A2B4B919A00E01393 /* Project object */;
 }

@@ -5,6 +5,7 @@
 //  Created by Alonso on 10/01/24.
 //
 
+import CasePaths
 import SwiftUI
 
 struct ItemView: View {
@@ -25,7 +26,7 @@ struct ItemView: View {
                 Text("Color")
             }
 
-            self.$item.status.quantity.unwrap().map { quantity in
+            self.$item.status[/Item.Status.inStock].map { quantity in
                 Section {
                     Stepper("Quantity: \(quantity.wrappedValue)", value: quantity, in: 1...Int.max)
                     Button("Mark as sold out") {
@@ -35,7 +36,7 @@ struct ItemView: View {
                     Text("In stock")
                 }
             }
-            self.$item.status.isOnBackOrder.unwrap().map { isOnBackOrder in
+            self.$item.status[/Item.Status.outOfStock].map { isOnBackOrder in
                 Section {
                     Toggle("Is on back order?", isOn: isOnBackOrder)
                     Button("Is back in stock!") {
