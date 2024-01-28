@@ -15,6 +15,8 @@
 		E28663062B4F938300774C25 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28663052B4F938300774C25 /* ItemView.swift */; };
 		E2A7E0A02B5DDD0A00C27C9B /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = E2A7E09F2B5DDD0A00C27C9B /* CasePaths */; };
 		E2B013602B5CD5E900B3E626 /* Binding+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B0135F2B5CD5E900B3E626 /* Binding+Unwrap.swift */; };
+		E2D2F7422B660F0200448178 /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2F7412B660F0200448178 /* InventoryViewModel.swift */; };
+		E2D2F7482B660F7100448178 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2F7472B660F7100448178 /* InventoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E28663032B4F932E00774C25 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E28663052B4F938300774C25 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		E2B0135F2B5CD5E900B3E626 /* Binding+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Unwrap.swift"; sourceTree = "<group>"; };
+		E2D2F7412B660F0200448178 /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
+		E2D2F7472B660F7100448178 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				E28663032B4F932E00774C25 /* Item.swift */,
 				E28663052B4F938300774C25 /* ItemView.swift */,
 				E2B0135F2B5CD5E900B3E626 /* Binding+Unwrap.swift */,
+				E2D2F7412B660F0200448178 /* InventoryViewModel.swift */,
+				E2D2F7472B660F7100448178 /* InventoryView.swift */,
 			);
 			path = ComposableBindings;
 			sourceTree = "<group>";
@@ -155,8 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E217A5A82B4B919A00E01393 /* ContentView.swift in Sources */,
+				E2D2F7422B660F0200448178 /* InventoryViewModel.swift in Sources */,
 				E28663042B4F932E00774C25 /* Item.swift in Sources */,
 				E217A5A62B4B919A00E01393 /* ComposableBindingsApp.swift in Sources */,
+				E2D2F7482B660F7100448178 /* InventoryView.swift in Sources */,
 				E2B013602B5CD5E900B3E626 /* Binding+Unwrap.swift in Sources */,
 				E28663062B4F938300774C25 /* ItemView.swift in Sources */,
 			);

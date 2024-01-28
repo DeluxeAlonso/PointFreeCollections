@@ -5,14 +5,22 @@
 //  Created by Alonso on 10/01/24.
 //
 
-struct Item {
+import Foundation
+
+struct Item: Hashable,Identifiable {
+    let id = UUID()
     var name: String
     var color: Color?
     var status: Status
 
-    enum Status {
+    enum Status: Hashable {
         case inStock(quantity: Int)
         case outOfStock(isOnBackOrder: Bool)
+
+        var isInStock: Bool {
+            guard case .inStock = self else { return false }
+            return true
+        }
     }
 
     enum Color: String, Hashable, CaseIterable {
