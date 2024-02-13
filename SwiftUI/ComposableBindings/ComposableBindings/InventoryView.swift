@@ -30,8 +30,14 @@ struct InventoryView: View {
                         item.color.map { color in
                             Rectangle()
                                 .frame(width: 30, height: 30)
+                                .foregroundColor(color.toSwiftUIColor)
                                 .border(Color.black, width: 1)
                         }
+
+                        Button(action: { self.viewModel.duplicate(item: item) }) {
+                            Image(systemName: "doc.on.doc.fill")
+                        }
+                        .padding(.leading)
                     }
                     .buttonStyle(PlainButtonStyle())
                     .foregroundColor(item.status.isInStock ? nil : Color.gray)

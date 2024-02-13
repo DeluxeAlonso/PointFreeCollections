@@ -5,7 +5,7 @@
 //  Created by Alonso on 10/01/24.
 //
 
-import Foundation
+import SwiftUI
 
 struct Item: Hashable,Identifiable {
     let id = UUID()
@@ -25,5 +25,22 @@ struct Item: Hashable,Identifiable {
 
     enum Color: String, Hashable, CaseIterable {
         case blue, green, black, red, yellow, white
+
+        var toSwiftUIColor: SwiftUI.Color {
+          switch self {
+          case .blue:
+            return .blue
+          case .green:
+            return .green
+          case .black:
+            return .black
+          case .red:
+            return .red
+          case .yellow:
+            return .yellow
+          case .white:
+            return .white
+          }
+        }
     }
 }

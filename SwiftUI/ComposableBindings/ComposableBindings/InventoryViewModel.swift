@@ -29,4 +29,8 @@ class InventoryViewModel: ObservableObject {
         }
         self.draft = nil
     }
+
+    func duplicate(item: Item) {
+        self.draft = Item(name: item.name, color: item.color, status: item.status)
+    }
 }
