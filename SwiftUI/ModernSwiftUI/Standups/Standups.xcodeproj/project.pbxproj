@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2D610CC2CC32402005452BA /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = E2D610CB2CC32402005452BA /* SwiftUINavigation */; };
+		E2D610CE2CC32402005452BA /* SwiftUINavigationCore in Frameworks */ = {isa = PBXBuildFile; productRef = E2D610CD2CC32402005452BA /* SwiftUINavigationCore */; };
+		E2D610D02CC32769005452BA /* EditStandupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D610CF2CC32769005452BA /* EditStandupView.swift */; };
 		E2F15E6D2CBF81AA006962AF /* StandupsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F15E6C2CBF81AA006962AF /* StandupsApp.swift */; };
 		E2F15E6F2CBF81AA006962AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F15E6E2CBF81AA006962AF /* ContentView.swift */; };
 		E2F15E712CBF81AC006962AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F15E702CBF81AC006962AF /* Assets.xcassets */; };
@@ -37,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E2D610CF2CC32769005452BA /* EditStandupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStandupView.swift; sourceTree = "<group>"; };
 		E2F15E692CBF81AA006962AF /* Standups.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Standups.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2F15E6C2CBF81AA006962AF /* StandupsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandupsApp.swift; sourceTree = "<group>"; };
 		E2F15E6E2CBF81AA006962AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D610CC2CC32402005452BA /* SwiftUINavigation in Frameworks */,
+				E2D610CE2CC32402005452BA /* SwiftUINavigationCore in Frameworks */,
 				E2F15E9D2CBF83D1006962AF /* Tagged in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +112,7 @@
 				E2F15E702CBF81AC006962AF /* Assets.xcassets */,
 				E2F15E722CBF81AC006962AF /* Preview Content */,
 				E2F15E992CBF82C1006962AF /* Models.swift */,
+				E2D610CF2CC32769005452BA /* EditStandupView.swift */,
 			);
 			path = Standups;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 			name = Standups;
 			packageProductDependencies = (
 				E2F15E9C2CBF83D1006962AF /* Tagged */,
+				E2D610CB2CC32402005452BA /* SwiftUINavigation */,
+				E2D610CD2CC32402005452BA /* SwiftUINavigationCore */,
 			);
 			productName = Standups;
 			productReference = E2F15E692CBF81AA006962AF /* Standups.app */;
@@ -228,6 +237,7 @@
 			mainGroup = E2F15E602CBF81AA006962AF;
 			packageReferences = (
 				E2F15E9B2CBF83D1006962AF /* XCRemoteSwiftPackageReference "swift-tagged" */,
+				E2D610CA2CC32402005452BA /* XCRemoteSwiftPackageReference "swiftui-navigation" */,
 			);
 			productRefGroup = E2F15E6A2CBF81AA006962AF /* Products */;
 			projectDirPath = "";
@@ -271,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D610D02CC32769005452BA /* EditStandupView.swift in Sources */,
 				E2F15E6F2CBF81AA006962AF /* ContentView.swift in Sources */,
 				E2F15E982CBF81FD006962AF /* StandupsList.swift in Sources */,
 				E2F15E6D2CBF81AA006962AF /* StandupsApp.swift in Sources */,
@@ -603,6 +614,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E2D610CA2CC32402005452BA /* XCRemoteSwiftPackageReference "swiftui-navigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swiftui-navigation.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		E2F15E9B2CBF83D1006962AF /* XCRemoteSwiftPackageReference "swift-tagged" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-tagged.git";
@@ -614,6 +633,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E2D610CB2CC32402005452BA /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2D610CA2CC32402005452BA /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigation;
+		};
+		E2D610CD2CC32402005452BA /* SwiftUINavigationCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2D610CA2CC32402005452BA /* XCRemoteSwiftPackageReference "swiftui-navigation" */;
+			productName = SwiftUINavigationCore;
+		};
 		E2F15E9C2CBF83D1006962AF /* Tagged */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E2F15E9B2CBF83D1006962AF /* XCRemoteSwiftPackageReference "swift-tagged" */;

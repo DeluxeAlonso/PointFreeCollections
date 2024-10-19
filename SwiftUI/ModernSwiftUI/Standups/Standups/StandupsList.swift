@@ -6,12 +6,43 @@
 //
 
 import SwiftUI
+import SwiftUINavigation
 
 final class StandupsListModel: ObservableObject {
+    @Published var destination: Destination?
     @Published var standups: [Standup]
 
-    init(standups: [Standup] = []) {
+    enum Destination {
+        case add(Standup)
+    }
+
+    init(destination: Destination? = nil,
+         standups: [Standup] = []) {
+        self.destination = destination
         self.standups = standups
+    }
+
+    func addStandupButtonTapped() {
+        let newStandup = Standup(id: Standup.ID(UUID()))
+        self.destination = .add(newStandup)
+    }
+
+    func dismissAddStandupButtonTapped() {
+        self.destination = nil
+    }
+
+    func confirmAddStandupButtonTapped() {
+        defer {
+            self.destination = nil
+        }
+        guard case var .add(standup) = self.destination else { return }
+        standup.attendees.removeAll { attendee in
+            attendee.name.allSatisfy(\.isWhitespace)
+        }
+        if standup.attendees.isEmpty {
+            standup.attendees.append(Attendee(id: Attendee.ID(UUID()), name: ""))
+        }
+        self.standups.append(standup)
     }
 }
 
@@ -23,10 +54,36 @@ struct StandupsList: View {
             List {
                 ForEach(self.model.standups) { standup in
                     CardView(standup: standup)
-                        .listRowBackground(standup.theme.accentColor)
+                        .listRowBackground(standup.theme.mainColor)
+                }
+            }
+            .toolbar {
+                Button {
+                    self.model.addStandupButtonTapped()
+                } label: {
+                    Image(systemName: "plus")
                 }
             }
             .navigationTitle("Daily Standups")
+            .sheet(unwrapping: self.$model.destination,
+                   case: /StandupsListModel.Destination.add) { $standup in
+                NavigationStack {
+                    EditStandupView(standup: $standup)
+                        .navigationTitle("New standup")
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Dismiss") {
+                                    self.model.dismissAddStandupButtonTapped()
+                                }
+                            }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Add") {
+                                    self.model.confirmAddStandupButtonTapped()
+                                }
+                            }
+                        }
+                }
+            }
         }
     }
 }
